@@ -303,7 +303,7 @@ loop:
 					}
 				}
 				return err
-			} else if flag == HelpFlag {
+			} else if flag == app.HelpFlag {
 				ignoreDefault = true
 			}
 
@@ -321,7 +321,7 @@ loop:
 						return fmt.Errorf("expected command but got %q", token)
 					}
 				}
-				if cmd == HelpCommand {
+				if cmd == app.HelpCommand {
 					ignoreDefault = true
 				}
 				context.matchedCmd(cmd)
